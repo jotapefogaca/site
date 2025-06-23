@@ -1,0 +1,18 @@
+.embla {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    min-height: 40vh;
+}
+
+.embla__container {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.embla__slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    height: auto;
+}
