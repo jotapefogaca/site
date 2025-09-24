@@ -46,9 +46,10 @@ export async function generateMetadata(
 }
 
 export default async function Page({ params, searchParams }: Props) {
-    const data = await fetch(`https://www.foxylady.com.br/api/v1/getModel?nickname=${(await params).slug}`)
-    const result = await data.json()
-
+    // Substituir o fetch externo pelo método da API local
+    const id = (await params).slug
+    const result = await api.acompanhante.getByNickname(id)
+    
     return (
         <Exibition model={result.model} />
     )
